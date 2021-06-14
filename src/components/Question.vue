@@ -3,7 +3,7 @@
     <v-col>
       <v-sheet class="my-3 pa-5" outlined rounded>
         <v-row>
-          <v-col cols="12" sm="6">
+          <v-col cols="12" :sm="question.img ? '6' : '12'">
             <h3 class="mb-10 primary--text">
               {{ question.id + 1 }}. {{ question.title }}
             </h3>

@@ -4,7 +4,10 @@ import q3 from '../assets/quiz-img/q3.jpg'
 import q4 from '../assets/quiz-img/q4.jpg'
 import q5 from '../assets/quiz-img/q5.jpg'
 import q6 from '../assets/quiz-img/q6.jpg'
+import q7 from '../assets/quiz-img/q7.jpg'
 import q8 from '../assets/quiz-img/q8.jpg'
+import q9 from '../assets/quiz-img/q9.jpg'
+import q10 from '../assets/quiz-img/q10.jpg'
 
 const quizData = {
     metadata: {
@@ -200,6 +203,7 @@ const quizData = {
         {
             id: 6,
             title: 'Who are the patients of the high-risk group for coronavirus?',
+            img: q7,
             choices: [
                 {
                     value: 'Children, pregnant women, elderly people;',
@@ -261,6 +265,7 @@ const quizData = {
         {
             id: 8,
             title: 'What are the similarities between influenza and coronavirus?',
+            img: q9,
             choices: [
                 {
                     value: 'The speed of transmission;',
@@ -285,6 +290,37 @@ const quizData = {
                     selected: false,
                     isCorrect: false,
                     caption: 'No :( The high-risk group for coronavirus consists of people with underlying medical conditions and the elderly people. These people and also children, pregnant women are in the high-risk group for influenza.'
+                }
+            ]
+        },
+        {
+            id: 9,
+            title: 'Among whom is low health literacy most common?',
+            img: q10,
+            choices: [
+                {
+                    value: 'Elderly people, minority populations;',
+                    selected: false,
+                    isCorrect: true,
+                    caption: 'Well done! According to The Health Resources and Services Administration which is the agency of the U.S. Department of Health and Human Services, these people are in a group where low health literacy is more prevalent.'
+                },
+                {
+                    value: 'The youth;',
+                    selected: false,
+                    isCorrect: false,
+                    caption: 'Wrong. According to HRSA - U.S. Department of Health Agency,  Older adults, Minority populations, those who have low socioeconomic status (SES) and medically underserved people are in a group where low health literacy is more wide-spread.'
+                },
+                {
+                    value: 'Persons without higher education;',
+                    selected: false,
+                    isCorrect: false,
+                    caption: 'No! According to HRSA - U.S. Department of Health Agency, Older adults, Minority populations, those who have low socioeconomic status (SES) and medically underserved people are in a group where low health literacy is more wide-spread.'
+                },
+                {
+                    value: 'Residents of small towns and villages;',
+                    selected: false,
+                    isCorrect: false,
+                    caption: 'You are not right, According to HRSA - U.S. Department of Health Agency, Older adults, Minority populations, those who have low socioeconomic status (SES) and medically underserved people are in a group where low health literacy is more wide-spread.'
                 }
             ]
         }
