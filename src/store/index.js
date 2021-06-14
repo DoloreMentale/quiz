@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import quizData from "../data/quiz";
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
+  actions: {
   },
   mutations: {
   },
-  actions: {
+  state: {
+    quizData: quizData
   },
-  modules: {
+  getters: {
+    quizData: state => state.quizData
   }
 })
