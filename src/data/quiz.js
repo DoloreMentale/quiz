@@ -18,6 +18,7 @@ const quizData = {
             id: 0,
             title: "Who should possess health literacy first and foremost?",
             img: q1,
+            passed: false,
             choices: [
                 {
                     value: "Citizens",
@@ -49,6 +50,7 @@ const quizData = {
             id: 1,
             title: "What sentence is incorrect concerned with health literacy?",
             img: q2,
+            passed: false,
             choices: [
                 {
                     value: "Health literacy determines health behavior",
@@ -80,6 +82,7 @@ const quizData = {
             id: 2,
             title: "What is the COVID-19 myth/conspiracy theory in the statements below",
             img: q3,
+            passed: false,
             choices: [
                 {
                     value: "Covid-19 is spreading in many countries, regardless of whether 5G networks are there.",
@@ -111,6 +114,7 @@ const quizData = {
             id: 3,
             title: 'How to spot fake news?',
             img: q4,
+            passed: false,
             choices: [
                 {
                     value: 'Do not read beyond headlines as headlines are just brief, reliable and trustworthy summary of the article',
@@ -142,6 +146,7 @@ const quizData = {
             id: 4,
             title: 'What is inefficient way to slow down or stop infodemic?',
             img: q5,
+            passed: false,
             choices: [
                 {
                     value: 'use of repressive measures (e.g. blocking sources of information, mass media and social networks and messengers, the application of criminal penalties for individuals who distribute fake news)',
@@ -162,7 +167,7 @@ const quizData = {
                     caption: 'Educating people is always a good idea as well as in case of infodemic.'
                 },
                 {
-                    value: 'make medicine information must be easy-to-access, easy-to-understand, easy-to-use, culturally relevant to various populations.',
+                    value: 'make medicine information easy-to-access, easy-to-understand, easy-to-use, culturally relevant to various populations.',
                     selected: false,
                     isCorrect: false,
                     caption: 'These ones are crucial ethics for information providers, that ease the life of all citizens'
@@ -173,6 +178,7 @@ const quizData = {
             id: 5,
             title: 'Konstantin received a positive result for COVID-19 test. What should he do?',
             img: q6,
+            passed: false,
             choices: [
                 {
                     value: 'Of course, go to buy food, otherwise how to stay at home in the coming days.',
@@ -204,6 +210,7 @@ const quizData = {
             id: 6,
             title: 'Who are the patients of the high-risk group for coronavirus?',
             img: q7,
+            passed: false,
             choices: [
                 {
                     value: 'Children, pregnant women, elderly people;',
@@ -235,6 +242,7 @@ const quizData = {
             id: 7,
             title: 'What should a person do to find reliable information about the coronavirus?',
             img: q8,
+            passed: false,
             choices: [
                 {
                     value: 'Search everything in English, English-language media provide only relevant and useful information.',
@@ -266,6 +274,7 @@ const quizData = {
             id: 8,
             title: 'What are the similarities between influenza and coronavirus?',
             img: q9,
+            passed: false,
             choices: [
                 {
                     value: 'The speed of transmission;',
@@ -297,6 +306,7 @@ const quizData = {
             id: 9,
             title: 'Among whom is low health literacy most common?',
             img: q10,
+            passed: false,
             choices: [
                 {
                     value: 'Elderly people, minority populations;',

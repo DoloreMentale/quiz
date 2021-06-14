@@ -19,6 +19,7 @@
                   :color="choice.isCorrect ? 'success' : 'error'"
                   :label="choice.value"
                   :disabled="hideCheckboxes"
+                  @change="onCheckboxChange"
               >
               </v-checkbox>
               <span
@@ -35,12 +36,12 @@
             <v-icon color="error">mdi-close</v-icon>
             {{ choice.caption }}
           </span>
-              <v-spacer  class="mb-5"/>
+              <v-spacer class="mb-5"/>
             </div>
           </v-col>
 
           <v-col cols="12" sm="6">
-            <v-img transition :src="question.img" />
+            <v-img transition :src="question.img"/>
           </v-col>
         </v-row>
       </v-sheet>
@@ -59,6 +60,19 @@ export default {
   computed: {
     hideCheckboxes() {
       return this.question.choices.some(choice => choice.selected === true)
+    }
+  },
+  methods: {
+    onCheckboxChange() {
+      this.$store.commit('setQuestionPass', {
+        id: this.question.id,
+        passed: true
+      })
+
+      this.question.choices.forEach(choice => {
+        if (choice.selected && !choice.isCorrect) return
+        if (choice.selected && choice.isCorrect) this.$store.commit('setPoints')
+      })
     }
   }
 }

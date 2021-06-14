@@ -13,6 +13,22 @@
         :question="question"
     />
 
+    <v-row>
+      <v-col>
+        <v-btn
+            @click.prevent="$router.push({name: 'Result'})"
+            :disabled="quizIsNotFinished"
+            color="primary"
+            block
+            large
+        >
+          Show me results!
+        </v-btn>
+
+        <p v-if="quizIsNotFinished" class="error--text mt-3">Please, finish quiz first</p>
+      </v-col>
+    </v-row>
+
     <v-row class="mt-15">
       <v-col>
         <h3>Sources</h3>
@@ -49,6 +65,9 @@ export default {
   computed: {
     quiz() {
       return this.$store.getters.quizData
+    },
+    quizIsNotFinished() {
+      return this.quiz.items.some(item => item.passed === false)
     }
   }
 }

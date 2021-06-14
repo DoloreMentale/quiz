@@ -8,11 +8,19 @@ export default new Vuex.Store({
   actions: {
   },
   mutations: {
+    setQuestionPass: (state, payload) => {
+      state.quizData.items.forEach(item => {
+        if (item.id === payload.id) item.passed = payload.passed
+      })
+    },
+    setPoints: state => state.pointsCounter++
   },
   state: {
-    quizData: quizData
+    quizData: quizData,
+    pointsCounter: 0
   },
   getters: {
-    quizData: state => state.quizData
+    quizData: state => state.quizData,
+    pointsCounter: state => state.pointsCounter
   }
 })
