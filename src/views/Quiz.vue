@@ -42,7 +42,7 @@
             {{ index + 1 }}. {{ source.value }}
           </p>
 
-          <a :href="source.url">{{ source.url }}</a>
+          <a class="text-break" :href="source.url">{{ source.url }}</a>
         </div>
         <v-divider/>
       </v-col>
